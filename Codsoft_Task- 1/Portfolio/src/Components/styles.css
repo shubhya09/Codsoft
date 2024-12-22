@@ -1,0 +1,703 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #101e2a;
+    padding: 0.3rem;
+    color: rgb(255, 255, 255);
+    border: 1px solid #f5faff;
+    box-shadow: 2px rgb(233, 226, 226);
+    font-family:"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+  ;
+  gap: 200px;
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+  }
+  
+  .header li {
+    margin-left: 1rem;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  
+  }
+  
+  .home, .projects, .about, .contact {
+    padding: 2rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #282c34;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+
+  /* ------------------Home Page ----------------------------------------- */
+
+/* Home Page Styling */
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 8rem;
+  height: 70vh;
+  background: #101e2a;
+  color: #fff;
+  font-family:"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+  ;
+}
+
+.home-content {
+  flex: 1;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.home-content .highlight {
+  color: #be64ee;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: hsl(253, 80%, 60%);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 90px;
+}
+
+.cta-button:hover {
+  background-color: hsl(270, 98%, 65%);
+  transform: scale(1.05);
+  /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+/* Home Image Styling */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #020201;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 4rem;
+    height: auto;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-image {
+    margin-top: 2rem;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p {
+    font-size: 0.8rem;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+
+/* -------------------About Section------------------------------------ */
+/* About Section */
+.about-section {
+  padding: 5rem 20rem;
+  background-color: #101e2a;
+  color: #ffffff;
+  font-family:"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+  ;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* About Content */
+.about-content {
+  flex: 1;
+
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.about-content .highlight {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.skills {
+  margin-top: 2rem;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.skill h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family:"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+  ;
+}
+
+.skill-bar {
+  width: 40%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 280px;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.html-css {
+  width: 90%;
+  background-color: #ff7f50;
+}
+
+.js {
+  width: 85%;
+  background-color: #f7df1e;
+}
+
+.react {
+  width: 80%;
+  background-color: #61dafb;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes loadSkill {
+  from {
+    width: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 2rem 4rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+
+}
+
+/* ----------------------------Contact Section--------------------------------- */
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 8rem;
+  background: #101e2a;
+  color: #fff;
+  font-family:"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+  ;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Contact Information */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #6a11cb;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #6a11cb;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #7e4ade;
+  color: #333;
+  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 2rem 4rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+/* -------------------Project Section ------------------------------------- */
+
+/* Projects Section */
+.projects-section {
+  padding: 1rem 16rem;
+  background-color: #101e2a;
+  color: #333;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 80%;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #6a11cb;
+  font-weight: bold;
+  border: 1px solid #6a11cb;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #6a11cb;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-section {
+    padding: 2rem 4rem;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2rem;
+  }
+
+  .projects-title {
+    font-size: 1.8rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* -------------------------Footer Section ----------------------------- */
+/* Footer Styles */
+.footer {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 2rem 8rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-info {
+  margin-bottom: 1.5rem;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #6a11cb; /* Hover effect */
+}
+
+.social-icon i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
